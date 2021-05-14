@@ -1,0 +1,13 @@
+<launch>
+    <!-- Desactivamos el control del robot por teleop -->
+    <!-- <include file="$(find key_teleop)/launch/teleop.launch" > -->
+    <!--    <arg name="vel_topic" value="/mobile_base/commands/velocity"/>  -->
+    <!-- </include> -->
+
+    <!-- Controlamos mediante el módulo robot_wander -->
+	<arg name="vel_topic" default="/mobile_base/commands/velocity"/>
+	<node name="wander" pkg="laser_mapping" type="laser_mapping" output="screen" >
+		<param name="vel_topic" type="string" value="$(arg vel_topic)" />
+	</node>
+  <node name="mapping" pkg="laser_mapping" type="laser_mapping" output="screen"/>
+</launch>

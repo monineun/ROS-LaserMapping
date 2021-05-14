@@ -1,0 +1,108 @@
+\documentclass[spanish]{article}
+
+\usepackage{nips13submit_e,times}
+\nipsfinaltrue
+
+\usepackage[spanish,es-nodecimaldot, es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+
+
+% adds hyper links inside the generated pdf file
+\usepackage[final]{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+% \usepackage{multirow}
+% \usepackage{algorithm,algpseudocode}
+\usepackage{subfigure}
+
+\setlength{\marginparwidth}{2cm}
+\usepackage{subfig}
+\usepackage{amsmath}
+% \usepackage{listings}
+% \lstset{ %
+%     basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+%     numbers=left,                   % where to put the line-numbers
+%     numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+%     stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
+%     numbersep=5pt,                  % how far the line-numbers are from the code
+%     showspaces=false,               % show spaces adding particular underscores
+%     showstringspaces=false,         % underline spaces within strings
+%     showtabs=false,                 % show tabs within strings adding particular underscores
+%     frame=single,           % adds a frame around the code
+%     tabsize=2,          % sets default tabsize to 2 spaces
+%     captionpos=b,           % sets the caption-position to bottom
+%     breaklines=true,        % sets automatic line breaking
+%     breakatwhitespace=false,    % sets if automatic breaks should only happen at whitespace
+%     escapeinside={\%*}{*)}          % if you want to add a comment within your code
+% }
+\usepackage{booktabs}
+\usepackage{todonotes}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+% Load the package
+%\usepackage[acronym]{glossaries}
+
+% Generate the glossary
+%\makeglossaries
+%\input{acronyms}
+
+\title{Robótica Inteligente \\ \small Práctica final: Mapeado láser}
+
+\author{
+        David Revillas \\
+        \texttt{drevillas002@ikasle.ehu.eus}
+        \and
+        \textbf{Mónica Rampérez} \\
+        \texttt{mramperez001@ikasle.ehu.eus}
+}
+
+% \definecolor{darkgreen}{rgb}{0,0.5,0}
+% \definecolor{lightgray}{rgb}{0.95,0.95,0.95}
+% \definecolor{gray}{rgb}{0.65,0.65,0.65}
+% \lstset{basicstyle=\footnotesize\ttfamily,
+%                 keywordstyle=\color{darkgreen}\bfseries,
+%                 %identifierstyle=\color{blue},
+%                 commentstyle=\color{gray},
+%                 stringstyle=\ttfamily,
+%                 showstringspaces=false,
+%                 tabsize=2,
+%                 backgroundcolor=\color{lightgray},
+%                 literate=
+%                 {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+%                 {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+%                 {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+%                 {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+%                 {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+%                 {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+%                 {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+%                 {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+%                 {Ã}{{\~A}}1 {ã}{{\~a}}1 {Õ}{{\~O}}1 {õ}{{\~o}}1
+%                 {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+%                 {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+%                 {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+%                 {€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
+%                 {»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1
+% }
+
+% \DeclareMathOperator*{\argmax}{arg\,max}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    El objetivo de esta práctica final es el de construir un mapa del entorno mientras se teleopera el robot a través del teclado utilizando información de odometría.
+\end{abstract}
+
+\pagenumbering{gobble}
+%\tableofcontents
+%\newpage
+\pagenumbering{arabic}
+
+\input{01-intro}
+\input{02-estrategia}
+\input{03-evaluacion}
+\input{04-mejoras}
+
+\end{document}
